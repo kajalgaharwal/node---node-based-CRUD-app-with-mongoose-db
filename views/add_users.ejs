@@ -1,0 +1,98 @@
+<%- include('layout/header')%>
+<div class="container">
+  <table>
+    <div class="row">
+      <div class="col-lg-5" style="margin-top: 10%;margin-left: 25%;">
+        <div class="card shadow">
+          <div class="card-header bg-success">
+            <h3 class="text-align">Add New User</h3>
+          </div>
+          <div class="card-body p-4">
+            <form
+              action="/add"
+              method="post"
+              id="add-form"
+              enctype="multipart/form-data"
+            >
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="name"
+                  id="name"
+                  placeholder="Enter Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="Enter Email"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="phone"
+                  placeholder="Enter Contact Number"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="category"
+                    value="men"
+                    id="men"
+                  />
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Men
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="category"
+                    id="women"
+                    value="women"
+                    checked
+                  />
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    women
+                  </label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="image" class="form-label">Image</label>
+                <input type="file" class="form-control" name="image" />
+              </div>
+              <div class="mb-3 d-grid">
+                <input
+                  type="submit"
+                  name="submit"
+                  value="Add User"
+                  class="form-control.form-control-lg btn btn-success btn-lg"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </table>
+</div>
+<%- include('layout/footer')%>
